@@ -542,6 +542,71 @@ Steps are conditionally shown based on backend mode state. All integrations pres
 
 ---
 transition: slide-left
+layout: center
+---
+
+# How: The Flow Works Now
+
+<div class="text-sm opacity-70 mb-10">Let's look at the migration from two perspectives</div>
+
+<div class="grid grid-cols-2 gap-8 max-w-2xl mx-auto">
+
+<div v-click="1" class="border border-blue-500 bg-blue-500 bg-opacity-10 rounded-xl px-6 py-8 text-center hover-card">
+  <carbon-code class="text-blue-400 text-4xl mb-4" />
+  <div class="text-xl font-bold text-blue-400 mb-2">Developer Perspective</div>
+  <div class="text-sm opacity-60">Architecture, APIs, composables & testing</div>
+</div>
+
+<div v-click="2" class="border border-green-500 bg-green-500 bg-opacity-10 rounded-xl px-6 py-8 text-center hover-card">
+  <carbon-user-multiple class="text-green-400 text-4xl mb-4" />
+  <div class="text-xl font-bold text-green-400 mb-2">Customer Experience</div>
+  <div class="text-sm opacity-60">User flow, interactions & visual design</div>
+</div>
+
+</div>
+
+<style>
+h1 {
+  background: linear-gradient(90deg, #42b883, #35d6a0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.slidev-vclick-target {
+  transition: none !important;
+}
+
+.slidev-vclick-target.slidev-vclick-hidden {
+  opacity: 0 !important;
+  transform: scale(0.9);
+}
+
+.slidev-vclick-target:not(.slidev-vclick-hidden) {
+  animation: popIn 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+</style>
+
+<!--
+Transition slide into the "How" section. Two perspectives: Under the Hood covers the technical implementation,
+Customer Experience covers what the end user sees. The next slides dive into each.
+-->
+
+---
+transition: slide-left
 class: code-sm
 ---
 
