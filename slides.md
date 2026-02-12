@@ -217,77 +217,54 @@ JavaScript to TypeScript, Options API to Composition API, Vuex to Vue Query, Boo
 -->
 
 ---
-layout: two-cols
-layoutClass: gap-8
 transition: slide-left
 ---
 
-# Why Migrate?
+# Why We Migrate?
 
 <div class="text-xs mt-2 opacity-70 mb-4">The legacy stack had reached its limits</div>
 
-<div class="text-sm">
-
-<div v-click="1" class="flex items-start gap-2 mb-3">
-  <span class="text-red-400 text-base mt-0.5">&#x2718;</span>
-  <div><strong>Vue 2 & Nuxt 2 — End of Life</strong><br><span class="opacity-70">No security patches, no ecosystem updates</span></div>
-</div>
-
-<div v-click="2" class="flex items-start gap-2 mb-3">
-  <span class="text-red-400 text-base mt-0.5">&#x2718;</span>
-  <div><strong>No TypeScript</strong><br><span class="opacity-70">Runtime bugs, no IDE type safety, harder refactoring</span></div>
-</div>
-
-<div v-click="3" class="flex items-start gap-2 mb-3">
-  <span class="text-red-400 text-base mt-0.5">&#x2718;</span>
-  <div><strong>Monolithic Vuex Store (32KB single file)</strong><br><span class="opacity-70">Tightly coupled state, difficult to maintain & debug</span></div>
-</div>
-
-<div v-click="4" class="flex items-start gap-2 mb-3">
-  <span class="text-red-400 text-base mt-0.5">&#x2718;</span>
-  <div><strong>Zero Test Coverage & No Monitoring</strong><br><span class="opacity-70">Blind deployments, no visibility into production errors</span></div>
-</div>
-
-<div v-click="5" class="flex items-start gap-2 mb-3">
-  <span class="text-red-400 text-base mt-0.5">&#x2718;</span>
-  <div><strong>Heavy Dependencies</strong><br><span class="opacity-70">Moment.js, BootstrapVue — large bundles, discontinued libraries</span></div>
-</div>
-
-</div>
-
-::right::
-
-<div class="mt-10 text-sm">
-
-<div v-click="6" class="mb-4">
-  <div class="text-base font-semibold text-green-400 mb-3">Business Value Delivered</div>
-</div>
-
-<div v-click="7" class="flex items-start gap-2 mb-3">
-  <span class="text-green-400 text-base mt-0.5">&#x2714;</span>
-  <div><strong>Security & Compliance</strong><br><span class="opacity-70">Actively maintained framework with regular patches</span></div>
-</div>
-
-<div v-click="8" class="flex items-start gap-2 mb-3">
-  <span class="text-green-400 text-base mt-0.5">&#x2714;</span>
-  <div><strong>Faster Development Cycles</strong><br><span class="opacity-70">TypeScript + Composition API = fewer bugs, faster iteration</span></div>
-</div>
-
-<div v-click="9" class="flex items-start gap-2 mb-3">
-  <span class="text-green-400 text-base mt-0.5">&#x2714;</span>
-  <div><strong>Production Reliability</strong><br><span class="opacity-70">Vitest + Storybook + Sentry = confidence in every release</span></div>
-</div>
-
-<div v-click="10" class="flex items-start gap-2 mb-3">
-  <span class="text-green-400 text-base mt-0.5">&#x2714;</span>
-  <div><strong>Performance Gains</strong><br><span class="opacity-70">Vite builds, tree-shakeable deps, smaller runtime</span></div>
-</div>
-
-<div v-click="11" class="flex items-start gap-2 mb-3">
-  <span class="text-green-400 text-base mt-0.5">&#x2714;</span>
-  <div><strong>Future-Proof & Scalable</strong><br><span class="opacity-70">Modern stack that grows with the product and attracts talent</span></div>
-</div>
-
+<div class="grid grid-cols-2 gap-3 text-xs">
+  <div v-click="1" class="flex items-start gap-2 border border-red-900 bg-red-900 bg-opacity-10 rounded-lg px-3 py-2">
+    <carbon-close-filled class="text-red-400 text-base mt-0.5 flex-shrink-0" />
+    <div><strong>Vue 2 & Nuxt 2 — End of Life</strong><br><span class="opacity-70">No security patches, no ecosystem updates</span></div>
+  </div>
+  <div v-click="6" class="flex items-start gap-2 border border-green-900 bg-green-900 bg-opacity-10 rounded-lg px-3 py-2">
+    <carbon-checkmark-filled class="text-green-400 text-base mt-0.5 flex-shrink-0" />
+    <div><strong>Security & Compliance</strong><br><span class="opacity-70">Actively maintained framework with regular patches</span></div>
+  </div>
+  <div v-click="2" class="flex items-start gap-2 border border-red-900 bg-red-900 bg-opacity-10 rounded-lg px-3 py-2">
+    <carbon-close-filled class="text-red-400 text-base mt-0.5 flex-shrink-0" />
+    <div><strong>No TypeScript</strong><br><span class="opacity-70">Runtime bugs, no IDE type safety, harder refactoring</span></div>
+  </div>
+  <div v-click="7" class="flex items-start gap-2 border border-green-900 bg-green-900 bg-opacity-10 rounded-lg px-3 py-2">
+    <carbon-checkmark-filled class="text-green-400 text-base mt-0.5 flex-shrink-0" />
+    <div><strong>Faster Development Cycles</strong><br><span class="opacity-70">TypeScript + Composition API = fewer bugs, faster iteration</span></div>
+  </div>
+  <div v-click="3" class="flex items-start gap-2 border border-red-900 bg-red-900 bg-opacity-10 rounded-lg px-3 py-2">
+    <carbon-close-filled class="text-red-400 text-base mt-0.5 flex-shrink-0" />
+    <div><strong>Monolithic Vuex Store (32KB single file)</strong><br><span class="opacity-70">Tightly coupled state, difficult to maintain & debug</span></div>
+  </div>
+  <div v-click="8" class="flex items-start gap-2 border border-green-900 bg-green-900 bg-opacity-10 rounded-lg px-3 py-2">
+    <carbon-checkmark-filled class="text-green-400 text-base mt-0.5 flex-shrink-0" />
+    <div><strong>Production Reliability</strong><br><span class="opacity-70">Vitest + Storybook + Sentry = confidence in every release</span></div>
+  </div>
+  <div v-click="4" class="flex items-start gap-2 border border-red-900 bg-red-900 bg-opacity-10 rounded-lg px-3 py-2">
+    <carbon-close-filled class="text-red-400 text-base mt-0.5 flex-shrink-0" />
+    <div><strong>Zero Test Coverage & No Monitoring</strong><br><span class="opacity-70">Blind deployments, no visibility into production errors</span></div>
+  </div>
+  <div v-click="9" class="flex items-start gap-2 border border-green-900 bg-green-900 bg-opacity-10 rounded-lg px-3 py-2">
+    <carbon-checkmark-filled class="text-green-400 text-base mt-0.5 flex-shrink-0" />
+    <div><strong>Performance Gains</strong><br><span class="opacity-70">Vite builds, tree-shakeable deps, smaller runtime</span></div>
+  </div>
+  <div v-click="5" class="flex items-start gap-2 border border-red-900 bg-red-900 bg-opacity-10 rounded-lg px-3 py-2">
+    <carbon-close-filled class="text-red-400 text-base mt-0.5 flex-shrink-0" />
+    <div><strong>Heavy Dependencies</strong><br><span class="opacity-70">Moment.js, BootstrapVue — large bundles, discontinued libraries</span></div>
+  </div>
+  <div v-click="10" class="flex items-start gap-2 border border-green-900 bg-green-900 bg-opacity-10 rounded-lg px-3 py-2">
+    <carbon-checkmark-filled class="text-green-400 text-base mt-0.5 flex-shrink-0" />
+    <div><strong>Future-Proof & Scalable</strong><br><span class="opacity-70">Modern stack that grows with the product and attracts talent</span></div>
+  </div>
 </div>
 
 <style>
@@ -570,7 +547,7 @@ class: code-sm
 
 # How: API Communication
 
-<div class="text-xs opacity-70 mb-2">Same endpoint — click to see the transformation</div>
+<div class="text-xs opacity-70 mb-2">From a monolithic Vuex store to a typed, layered API architecture with built-in caching</div>
 
 ````md magic-move {lines: true}
 ```js
@@ -1153,13 +1130,13 @@ transition: slide-left
 <div class="text-xs opacity-70 mb-6">When this change goes live and becomes effective</div>
 
 <div class="flex items-center justify-center gap-6 mb-8">
-  <div class="border border-gray-700 bg-gray-800 bg-opacity-50 rounded-lg px-8 py-5 text-center flex-1 max-w-xs">
+  <div v-click="1" class="border border-gray-700 bg-gray-800 bg-opacity-50 rounded-lg px-8 py-5 text-center flex-1 max-w-xs">
     <carbon-checkmark-filled class="text-green-400 text-3xl mb-2" />
     <div class="text-base font-semibold opacity-70">Current Sprint</div>
     <div class="text-xs opacity-50 mt-1">Development & QA</div>
   </div>
-  <div class="text-green-400 text-3xl arrow-pulse">→</div>
-  <div class="border border-green-500 bg-green-900 bg-opacity-20 rounded-lg px-8 py-5 text-center flex-1 max-w-xs next-sprint-glow">
+  <div v-click="2" class="text-green-400 text-3xl arrow-pulse">→</div>
+  <div v-click="3" class="border border-green-500 bg-green-900 bg-opacity-20 rounded-lg px-8 py-5 text-center flex-1 max-w-xs next-sprint-glow">
     <carbon-rocket class="text-green-400 text-3xl mb-2" />
     <div class="text-lg font-bold text-green-400">Next Sprint</div>
     <div class="text-xs opacity-70 mt-1">Production Release</div>
@@ -1196,6 +1173,12 @@ h1 {
 }
 .slidev-vclick-target:not(.slidev-vclick-hidden) {
   animation: slideIn 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+.slidev-vclick-target.arrow-pulse:not(.slidev-vclick-hidden) {
+  animation: slideIn 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards, arrowPulse 1.5s ease-in-out 0.4s infinite;
+}
+.slidev-vclick-target.next-sprint-glow:not(.slidev-vclick-hidden) {
+  animation: slideIn 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards, glow 2s ease-in-out 0.4s infinite;
 }
 @keyframes slideIn {
   0% { opacity: 0; transform: translateY(12px); }
